@@ -1,0 +1,236 @@
+@import "./reset.css";
+/*
+뭐해...? 그냥 bold나 700.800이렇게 주면 되잖아...
+font-family: 'GmarketSansBold'; 'GmarketSansMedium';'GmarketSansLight';*/
+@font-face {/*지마켓m*/
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: url(../images/Almost.jpg) no-repeat;
+    background-size: cover;
+}
+
+/* background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 900 600' width='900' height='600' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='900' height='600' fill='%23edf7d6'%3E%3C/rect%3E%3Cg transform='translate(422.70286128499384 307.1952356227688)'%3E%3Cpath d='M168.5 -200.3C216.6 -160.5 252.6 -105.7 265.8 -44.8C279 16.1 269.4 83 234.3 127.2C199.2 171.4 138.6 192.8 78.6 213.6C18.7 234.3 -40.6 254.3 -90.2 239.8C-139.9 225.3 -179.9 176.1 -200.2 123.9C-220.5 71.6 -221 16.3 -208.5 -33.6C-195.9 -83.5 -170.3 -127.9 -133.4 -169.8C-96.4 -211.6 -48.2 -250.8 6 -257.9C60.2 -265.1 120.4 -240.2 168.5 -200.3' fill='%23019267'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");*/
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    font-family:'GmarketSansMedium';
+    color:#000;
+}/*뭐라도 글자가 들어있어야 나온다....ㅅㅂ....아무것도 안쓰고 새고만햇니 안나와서 한 15분 헤멤 시발....*/
+/*body에 배경 넣는 걸로 해결*/
+
+.wrapper_two {
+    display: flex;
+    margin: 0 auto;
+    height:520px;
+    margin-top: 15px;
+}
+
+
+#main { /*1350/3 = 450*/
+    width: 40%;
+    order: 2;
+    background-color: rgb(115, 177, 247);
+}
+
+#main #clock {
+    margin-top: 150px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 70px;
+    color:#fff;
+}
+
+#main form {
+    width: 450px;
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: center;
+}
+
+#main form input {
+    width:450px;
+    height: 50px;
+    border: none;
+    border-bottom: 4px solid #fff;
+    background-color: transparent;
+    color:#fff;
+    font-size: 25px;
+    font-family:'GmarketSansMedium';
+    text-align: center;
+    outline: none; /*focus시 검정 선 없애기*/
+}
+
+#main form input::placeholder {
+    color:rgb(56, 56, 56);
+    opacity: 0.8;
+    text-align: center;
+}
+
+/*#FFF56D*/
+#main form input:focus {
+    border-bottom: 4px dotted rgba(255, 255, 255, 0.815); 
+    transition:all 1s;
+}
+  
+#main form input[type="submit"] {
+    background-color: none;
+    border: none;
+    width: 200px;
+    height: 50px;
+    margin-top:5px;
+    color:rgb(56, 56, 56);
+    font-size: 20px;
+    transition:all 0.5s;
+}
+
+#main form input[type="submit"]:hover {
+    cursor: pointer;
+    color: #fff;
+    margin-top:5px;
+    transition:all 0.5s;
+}
+
+
+#greeting {
+    width: 450px;
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: center;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    color:#fff;
+    font-size: 45px;
+    font-family:'GmarketSansMedium';
+    font-weight: bold;
+    text-align: center;
+    outline: none; /*focus시 검정 선 없애기*/
+}
+
+
+#main_left {
+    order: 1;
+    width: 30%;
+    background-color: aquamarine;
+    margin: 0 auto;
+}
+
+#main_left form {
+    width:370px;
+    margin: 0 auto;
+    margin-top:10px;
+}
+
+#main_left form p {
+    font-size: 20px;
+    text-align: center;
+    margin:10px;
+}
+
+#main_left form input {
+    width:350px;
+    height: 50px;
+    border: none;
+    background-color: #fff;
+    text-align: center;
+    color:#000;
+    font-size: 16px;
+    font-family:'GmarketSansMedium';
+    outline: none; /*focus시 검정 선 없애기*/
+}
+
+#main_left form input::placeholder {
+    color:rgb(56, 56, 56); /**/
+    opacity: 0.8;
+    text-align: center;
+}
+
+/*#FFF56D
+#main_left form input:focus {
+    border-bottom: 2px solid #FFF56D;
+}*/
+  
+#main_left ul {
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#main_left ul li {
+    width: 400px;
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#main_left ul li span {
+    width: 355px;
+    text-align: left;
+}
+
+#main_left ul li button {
+    all: unset;
+    width:45px;
+    height:30px;
+}
+
+#main_right {
+    order: 3;
+    width:30%;
+    background-color: bisque;
+}
+
+
+
+#footer {
+    margin: 0 auto;
+    width:70%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#quote p:first-child {
+    font-size:14px;
+}
+
+
+#quote p:last-child{
+    margin-top:1px;
+    font-size:10px;
+}
+
+.colorchange{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.colorchange button{
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/*https://uigradients.com/*/
+.colorchange button:nth-child(1) {
+    background: url(../images/Almost.jpg) no-repeat;
+    background-size: cover; /*공통말고 각자 써줘야 이쁘게 잡혀*/
+}
+
+.colorchange button:nth-child(2) {
+    background: url(../images/Lush.jpg) no-repeat;
+    background-size: cover;
+}
+
+.colorchange button:nth-child(3) {
+    background: url(../images/Stellar.jpg) no-repeat;
+    background-size: cover;
+}
