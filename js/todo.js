@@ -23,12 +23,12 @@ function paintToDo(newTodo) {
     const span = document.createElement("span");
     span.textContent = newTodo.text;
     const button = document.createElement("button");
-    button.textContent = "🍺🎯"
+    button.textContent = "♥"
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);
     toDoList.appendChild(li);
-}//앞에....체크 박스를 넣을 수 있을까...?
+}
 
 function handleToDoSubmit(event) {
     event.preventDefault();

@@ -18,20 +18,22 @@ function changeBgC(){
     document.body.style.backgroundImage= 'url("images/Stellar.jpg")';
 }
 
-/*
-const FontColor = document.querySelector('.fontcolor');
+const fourth = document.querySelector('.fourth');
+const randomImage = [
+    'Pastel Orange at the Sun.jpg',
+    'PiggyPink.jpg',
+    'Tranquil.jpg',
+    'Ultra Voilet.jpg',
+    'Pizelex.jpg',
+    'DIMIGO.jpg',
+    'Peach.jpg',
+    'Deep Purple.jpg',
+    'Amin.jpg',
+    'EasyMed.jpg'
+];
 
-FontColor.addEventListener("hover", function(){
-    if (FontColor == 'black') {}
-}*/
-
-
-//https://homzzang.com/b/js-1547
-//document.body.style.backgroundColor= "Tomato"; 
-//const loginInput = document.querySelector("#login-form input");
-/*function deleteToDo(event) {
-    const li = event.target.parentElement;
-    li.remove();
-    toDos = toDos.filter((todo) => todo.id !== parseInt(li.id));
-    savedToDos();
-}*/
+fourth.addEventListener('click', changeBgD);
+function changeBgD(){
+    document.body.style.backgroundImage= 'url("images/' + randomImage[Math.floor(Math.random()*randomImage.length)] + '")';
+    fourth.style.backgroundImage = document.body.style.backgroundImage;
+}

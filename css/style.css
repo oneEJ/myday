@@ -1,7 +1,5 @@
 @import "./reset.css";
-/*
-뭐해...? 그냥 bold나 700.800이렇게 주면 되잖아...
-font-family: 'GmarketSansBold'; 'GmarketSansMedium';'GmarketSansLight';*/
+
 @font-face {/*지마켓m*/
     font-family: 'GmarketSansMedium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
@@ -20,8 +18,7 @@ body {
     width: 100%;
     font-family:'GmarketSansMedium';
     color:#000;
-}/*뭐라도 글자가 들어있어야 나온다....ㅅㅂ....아무것도 안쓰고 새고만햇니 안나와서 한 15분 헤멤 시발....*/
-/*body에 배경 넣는 걸로 해결*/
+}
 
 .wrapper_two {
     display: flex;
@@ -30,15 +27,18 @@ body {
     margin-top: 15px;
 }
 
+.hidden {
+    display : none; 
+}/*이 부분을 넣지 않아서 js에서 hidden이 안먹힌것*/
 
 #main { /*1350/3 = 450*/
     width: 40%;
     order: 2;
-    background-color: rgb(115, 177, 247);
+    /* background-color: rgb(115, 177, 247); */
 }
 
 #main #clock {
-    margin-top: 150px;
+    margin-top: 200px;
     font-weight: bold;
     text-align: center;
     font-size: 70px;
@@ -71,7 +71,6 @@ body {
     text-align: center;
 }
 
-/*#FFF56D*/
 #main form input:focus {
     border-bottom: 4px dotted rgba(255, 255, 255, 0.815); 
     transition:all 1s;
@@ -116,14 +115,15 @@ body {
 #main_left {
     order: 1;
     width: 30%;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     margin: 0 auto;
+    padding-top: 50px;
+    overflow: hidden;
 }
 
 #main_left form {
     width:370px;
     margin: 0 auto;
-    margin-top:10px;
 }
 
 #main_left form p {
@@ -145,25 +145,21 @@ body {
 }
 
 #main_left form input::placeholder {
-    color:rgb(56, 56, 56); /**/
+    color:rgb(56, 56, 56); 
     opacity: 0.8;
     text-align: center;
 }
 
-/*#FFF56D
-#main_left form input:focus {
-    border-bottom: 2px solid #FFF56D;
-}*/
   
 #main_left ul {
     text-align: center;
-    width: 400px;
+    width: 300px;
     margin: 0 auto;
     margin-top: 10px;
 }
 
 #main_left ul li {
-    width: 400px;
+    width: 300px;
     height: 30px;
     line-height: 30px;
     display: flex;
@@ -179,36 +175,108 @@ body {
     all: unset;
     width:45px;
     height:30px;
+    cursor: pointer;
+    color: rgb(238, 41, 67);
 }
+
+
 
 #main_right {
     order: 3;
     width:30%;
-    background-color: bisque;
+    /* background-color: bisque; */
+    margin: 0 auto;
+    /* padding-top: 50px; */
+    text-align: center;
+    overflow: hidden;
+}
+
+.main_right_dday > p {
+    font-size: 25px;
+    padding: 20px;
+    width: 370px;
+}
+
+.main_right_dday ul {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.main_right_dday li {
+    width: 300px;
+    padding: 5px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_right_dday li p {
+    width: 200px;
+    text-align: left
 }
 
 
+.main_right_dday span {
+    background-color: white;
+    font-weight: bold;
+    display: inline-block;
+    width: 85px;
+}
+
+
+.main_right_text {
+    width: 390px;
+    margin-top: 10px;
+}
+
+.main_right_text p:nth-child(1) {
+    font-size: 25px;
+} 
+
+.main_right_text textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none; 
+    width: 250px;
+    height: 200px;
+    font-family: 'GmarketSansMedium';
+    padding: 10px;
+}
+
+.main_right_text textarea::placeholder {
+    font-family: 'GmarketSansMedium';
+    text-align: center;
+    font-size: 17px;
+}
 
 #footer {
     margin: 0 auto;
     width:70%;
     text-align: center;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 
 #quote p:first-child {
     font-size:14px;
+    color: rgb(54, 54, 54);
 }
 
 
 #quote p:last-child{
     margin-top:1px;
     font-size:10px;
+    color: rgb(54, 54, 54);
 }
 
 .colorchange{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .colorchange button{
@@ -234,3 +302,9 @@ body {
     background: url(../images/Stellar.jpg) no-repeat;
     background-size: cover;
 }
+
+.colorchange button:nth-child(4) {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

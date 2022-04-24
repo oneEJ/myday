@@ -1,28 +1,30 @@
-const loginForm = document.querySelector("#login-form");
-const loginInput = document.querySelector("#login-form input");
-const greeting = document.querySelector("#greeting");
+const loginForm = document.querySelector('#login-form');
+const loginInput = document.querySelector('#login-form input');
+const greeting = document.querySelector('#greeting');
 
-const HIDDEN_CLASSNAME = "hidden";
-const USERNAME_KEY = "username";
+const HIDDENCLASS = 'hidden';
+const USERNAME = 'username';
+// const inputUsername = loginInput.value; 이거하면 안돼...
 
-function onLoginSubmit(event) {
-    event.preventDefault();
-    loginForm.classList.add(HIDDEN_CLASSNAME);
-    const username = loginInput.value;
-    localStorage.setItem(USERNAME_KEY, username);
-    paintGreetings(username);
+function onLoginSubmit(event){
+	event.preventDefault();
+	loginForm.classList.add(HIDDENCLASS);
+	localStorage.setItem(USERNAME, loginInput.value);
+
+	greeting.classList.remove(HIDDENCLASS);
+	greeting.textContent = `안녕, ${loginInput.value}`;
 }
 
-function paintGreetings(username) {
-    greeting.textContent = `안녕, ${username}`;
-    greeting.classList.remove(HIDDEN_CLASSNAME); //여기서 히든 지우는게 먼저라 html에 써야하는 듯
-} 
+const savedUsername = localStorage.getItem(USERNAME); 
+//여기 loginInput.value하면 안나옴
+//getItem('input'), setItem('input', value) 이런식임
 
-const savedUsername = localStorage.getItem(USERNAME_KEY);
-
-if (savedUsername === null) {
-    loginForm.classList.remove(HIDDEN_CLASSNAME);
-    loginForm.addEventListener("submit", onLoginSubmit);
-    } else {
-        paintGreetings(savedUsername);
+if (savedUsername === null){
+	loginForm.classList.remove(HIDDENCLASS);
+	loginForm.addEventListener('submit', onLoginSubmit);
+} else {
+	greeting.classList.remove(HIDDENCLASS);
+	greeting.textContent = `안녕, ${savedUsername}`;
 }
+
+
