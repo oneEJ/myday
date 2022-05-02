@@ -27,4 +27,15 @@ if (savedUsername === null){
 	greeting.textContent = `안녕, ${savedUsername}`;
 }
 
+//////////////
 
+const logout = document.querySelector('.logout');
+
+function deleteAll() {
+	if(localStorage !== null) {
+	localStorage.clear();
+	location.reload();
+	} //window를 붙이지 말아야 하나봐
+}
+
+logout.addEventListener('click', deleteAll);
