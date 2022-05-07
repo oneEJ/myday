@@ -12,7 +12,7 @@
     <div class="wrapper">
         <div class="wrapper_two">
             <main id="main">
-                <button class="logout">&#128167;</button>
+                <button class="logout"></button>
                 <h1 id="clock">00:00:00</h1>
                 <form class="hidden" id="login-form">
                     <input
@@ -28,7 +28,12 @@
             <section id="main_left">
                 <form id="todo-form">
                     <!-- <p>오늘 하루, 다시 시작되는</p> -->
-                    <input type="text" placeholder="오늘은 무엇을 할까?" required>
+                    <input 
+                        type="text" 
+                        placeholder="오늘은 무엇을 할까?" 
+                        required
+                        maxlength="30"
+                    >
                 </form>
                 <ul id="todo-list"></ul>
             </section>
@@ -44,7 +49,8 @@
                 </div>
                 <div class="main_right_text">
                     <p>💌</p>
-                    <textarea name="message" placeholder="오늘의 남기고픈 말은 뭐야?"></textarea>
+                    <textarea class="main_right_text_container"
+                    name="message" placeholder="오늘의 남기고픈 말은 뭐야?"></textarea>
                 </div>
             </section>
         </div>
